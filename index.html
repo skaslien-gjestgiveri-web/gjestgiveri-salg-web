@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
             <a href="https://skaslien.no" class="logo-link">
                 <img src="assets/img/logo.webp" alt="Skaslien Gjestgiveri" class="logo">
             </a>
             <div class="nav-links">
-                <a href="#overview">Overview</a>
+                <a href="#hero">Overview</a>
                 <a href="#business">Business Facts</a>
                 <a href="#property">Property</a>
                 <a href="#awards">Awards</a>
                 <a href="#location">Location</a>
                 <a href="#contact">Contact</a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -38,17 +43,18 @@
                             <span>77 beds total</span>
                         </div>
                         <div class="stat">
-                            <strong>16.6M NOK</strong>
-                            <span>2024 revenue</span>
+                            <strong>Award-winning kitchen</strong>
+                            <span>Catering, à la carte and special occasions</span>
                         </div>
                         <div class="stat">
-                            <strong>Since 1952</strong>
-                            <span>Established operation</span>
+                            <strong>16.6M NOK</strong>
+                            <span>2024 revenue</span>
                         </div>
                     </div>
                     <a href="#contact" class="cta-button">Contact Us</a>
                 </div>
                 <div class="hero-image">
+                    <img src="assets/img/property_7.jpeg" alt="Sign in a field pointing to Skaslien Gjestgiveri">
                     <img src="assets/img/overview_1.jpg" alt="Skaslien Gjestgiveri exterior view">
                 </div>
             </div>
@@ -75,15 +81,7 @@
                             <li><strong>Land:</strong> 22,000 m² total property</li>
                             <li><strong>Parking:</strong> 50 spaces</li>
                             <li><strong>Built:</strong> 2008, renovated 2013</li>
-                        </ul>
-                    </div>
-                    <div class="fact-card">
-                        <h3>Operations</h3>
-                        <ul>
                             <li><strong>Staff:</strong> 33 employees (17 full-time)</li>
-                            <li><strong>Occupancy:</strong> Ready for immediate operation</li>
-                            <li><strong>Status:</strong> Fully operational, well-maintained</li>
-                            <li><strong>Takeover:</strong> Available from July 2, 2025</li>
                         </ul>
                     </div>
                 </div>
@@ -105,15 +103,10 @@
                                 <a href="https://no.tripadvisor.com/Hotel_Review-g3225471-d3477786-Reviews-Skaslien_Hotel_Guesthouse-Kirkenaer_Grue_Municipality_Hedmark_Eastern_Norway.html" target="_blank">View Reviews</a>
                             </div>
                             <div class="score-card">
-                                <div class="score">8.8/10</div>
+                                <div class="score">8.7/10</div>
                                 <div class="platform">Booking.com</div>
                                 <div class="detail">Excellent rating</div>
                                 <a href="https://www.booking.com/hotel/no/skaslien-hotel-guesthouse.no.html" target="_blank">View Reviews</a>
-                            </div>
-                            <div class="score-card">
-                                <div class="score">#1</div>
-                                <div class="platform">Solør Region</div>
-                                <div class="detail">Top ranking</div>
                             </div>
                         </div>
                     </div>
@@ -140,32 +133,40 @@
                         <h3>Accommodation</h3>
                         <p><strong>40 guest rooms</strong> with 77 beds total across two floors</p>
                         <div class="facility-images">
-                            <img src="assets/img/rooms_1.jpg" alt="Guest room">
-                            <img src="assets/img/rooms_2.jpg" alt="Guest room interior">
+                            <img src="assets/img/rooms_1.jpg" alt="A bright suite with seating area">
+                            <img src="assets/img/rooms_2.jpg" alt="Twin room">
+                            <img src="assets/img/rooms_4.jpg" alt="Double room">
+                            <img src="assets/img/rooms_6.jpg" alt="Handicap accessible rooms">
                         </div>
                     </div>
                     <div class="facility-card">
                         <h3>Restaurant & Kitchen</h3>
                         <p><strong>Award-winning restaurant</strong> with fully equipped commercial kitchen</p>
                         <div class="facility-images">
-                            <img src="assets/img/food_1.jpg" alt="Restaurant cuisine">
-                            <img src="assets/img/interior_1.jpg" alt="Restaurant interior">
+                            <img src="assets/img/food_2.jpg" alt="Tomato carpaccio and summer greens">
+                            <img src="assets/img/food_3.jpg" alt="Sous-vide beetroot with grilled scallops and a butter sauce">
+                            <img src="assets/img/food_4.jpg" alt="Locally sourced frilandsgris with a cognac sauce and seasonal vegetables">
+                            <img src="assets/img/food_7.jpg" alt="The chefs preparing dinner in the modern kitchen">
                         </div>
                     </div>
                     <div class="facility-card">
                         <h3>Conference & Events</h3>
-                        <p><strong>Up to 200 people capacity</strong> with modern AV equipment</p>
+                        <p><strong>Up to 200 person capacity</strong> with modern AV equipment</p>
                         <div class="facility-images">
-                            <img src="assets/img/interior_2.jpg" alt="Conference facilities">
-                            <img src="assets/img/interior_3.jpg" alt="Event space">
+                            <img src="assets/img/interior_2.jpg" alt="The table is set for a dinner party">
+                            <img src="assets/img/food_12.jpg" alt="Guests enjoying a dinner in the restaurant">
+                            <img src="assets/img/interior_12.webp" alt="The table is set for a dinner party">
+                            <img src="assets/img/interior_13.webp" alt="The table is set for a dinner party">
                         </div>
                     </div>
                     <div class="facility-card">
                         <h3>Property Grounds</h3>
-                        <p><strong>22,000 m² total property</strong> with expansion opportunities</p>
+                        <strong>20,000 m² total property</strong> with expansion opportunities on <strong>over 10,000m² greenfield</strong></strong>
                         <div class="facility-images">
                             <img src="assets/img/property_1.JPG" alt="Property exterior">
-                            <img src="assets/img/property_2.jpeg" alt="Property grounds">
+                            <img src="assets/img/property_2.jpeg" alt="The stabbur on the grounds">
+                            <img src="assets/img/property_11.webp" alt="The gardens outside the restaurant">
+                            <img src="assets/img/interior_1.jpg" alt="The fireplace is lit by the restaurant">
                         </div>
                     </div>
                 </div>
@@ -219,7 +220,7 @@
                             <li>90 minutes to Gardermoen Airport</li>
                             <li>Between Elverum and Kongsvinger</li>
                             <li>Gateway to Finnskogen forest region</li>
-                            <li>Close to Sweden border</li>
+                            <li>Close to Swedish border</li>
                         </ul>
                     </div>
                     <div class="attractions">
@@ -227,16 +228,16 @@
                         <ul>
                             <li><strong>Norsk Skogfinsk Museum</strong> - New building opening 2025</li>
                             <li><strong>Finnskogleden Trail</strong> - 240km cultural heritage hiking</li>
-                            <li><strong>Trysil Ski Resort</strong> - Norway's largest (45 minutes)</li>
+                            <li><strong>Trysil Ski Resort</strong> - alpine skiing 1,5 hours away</li>
                             <li><strong>Kongsvinger Fortress</strong> - Historic star-shaped fortress</li>
                             <li><strong>Klart Glass Workshop</strong> - World-class glass blowing (5km)</li>
                         </ul>
                     </div>
                 </div>
                 <div class="location-images">
-                    <img src="assets/img/surroundings_1.jpeg" alt="Finnskogen forest">
-                    <img src="assets/img/surroundings_2.jpeg" alt="Regional landscape">
-                    <img src="assets/img/surroundings_3.jpeg" alt="Local nature">
+                    <img src="assets/img/surroundings_1.jpeg" alt="Fields of Solør in Glåmdalen">
+                    <img src="assets/img/surroundings_2.jpeg" alt="Pristine ski trails">
+                    <img src="assets/img/surroundings_7.webp" alt="Campfire by Glomma">
                 </div>
             </div>
         </section>
@@ -285,5 +286,56 @@
             <p>&copy; 2025 Skaslien Gjestgiveri. All rights reserved. | <a href="https://skaslien.no">skaslien.no</a></p>
         </div>
     </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Header scroll behavior
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.classList.add('header-hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('header-hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
