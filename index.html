@@ -32,29 +32,35 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Skaslien Gjestgiveri</h1>
-                    <h2>Historic Norwegian Guesthouse For Sale</h2>
-                    <p class="hero-subtitle">72 years of family tradition • Award-winning cuisine • Turnkey operation</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <strong>40 Rooms</strong>
-                            <span>77 beds total</span>
-                        </div>
-                        <div class="stat">
-                            <strong>Award-winning kitchen</strong>
-                            <span>Catering, à la carte and special occasions</span>
-                        </div>
-                        <div class="stat">
-                            <strong>16.6M NOK</strong>
-                            <span>2024 revenue</span>
-                        </div>
+            <div class="hero-video-section">
+                <div class="hero-media">
+                    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/hero.JPG">
+                        <source src="assets/video/hero_video.webm" type="video/webm">
+                        <!-- Fallback for browsers that don't support video -->
+                        <img src="assets/img/hero.JPG" alt="Skaslien Gjestgiveri - Historic Norwegian Guesthouse">
+                    </video>
+                    <div class="video-overlay"></div>
+                    <div class="hero-text-overlay">
+                        <h1>Skaslien Gjestgiveri</h1>
+                        <h2>Historic Norwegian Guesthouse For Sale</h2>
+                        <p class="hero-subtitle">72 years of family tradition • Award-winning cuisine • Turnkey operation</p>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="assets/img/property_7.jpeg" alt="Sign in a field pointing to Skaslien Gjestgiveri">
-                    <img src="assets/img/overview_1.jpg" alt="Skaslien Gjestgiveri exterior view">
+            </div>
+            <div class="hero-content">
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>40 Rooms</strong>
+                        <span>77 beds total</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Award-winning kitchen</strong>
+                        <span>Catering, à la carte and special occasions</span>
+                    </div>
+                    <div class="stat">
+                        <strong>16.6M NOK</strong>
+                        <span>2024 revenue</span>
+                    </div>
                 </div>
                 <a href="#contact" class="cta-button">Contact Us</a>
             </div>
@@ -336,6 +342,24 @@
                 }
             });
         });
+
+        // Video fallback handling and playback speed
+        const heroVideo = document.querySelector('.hero-video');
+        if (heroVideo) {
+            // Set slower playback speed (0.75 = 75% of normal speed)
+            heroVideo.addEventListener('loadeddata', function() {
+                this.playbackRate = 0.75;
+            });
+            
+            heroVideo.addEventListener('error', function() {
+                // If video fails to load, show the poster image
+                this.style.display = 'none';
+                const fallbackImg = this.querySelector('img');
+                if (fallbackImg) {
+                    fallbackImg.style.display = 'block';
+                }
+            });
+        }
     </script>
 </body>
 </html>
