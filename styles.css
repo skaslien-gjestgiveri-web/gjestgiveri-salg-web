@@ -505,7 +505,7 @@ nav {
 
 .location-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -710,4 +710,19 @@ footer a:hover {
     .hero-content {
         padding: 30px 15px 50px;
     }
+}
+
+/* Footer Credit */
+.credit {
+    font-size: 0.7rem !important;
+    margin-top: 0.5rem !important;
+    opacity: 0.7;
+}
+
+.credit a {
+    text-decoration: none;
+}
+
+.credit a:hover {
+    color: var(--accent-color) !important;
 }
