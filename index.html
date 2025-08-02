@@ -20,6 +20,16 @@
                 <a href="#awards">Awards</a>
                 <a href="#location">Location</a>
                 <a href="#contact">Contact</a>
+                <div class="mobile-language-flags">
+                    <a href="#" class="flag-link active" title="English">🇬🇧 English</a>
+                    <a href="https://fremtid.skaslien.no" class="flag-link" title="Norsk">🇳🇴 Norsk</a>
+                    <a href="https://zukunft.skaslien.no" class="flag-link" title="Deutsch">🇩🇪 Deutsch</a>
+                </div>
+            </div>
+            <div class="language-flags">
+                <a href="#" class="flag-link active" title="English">🇬🇧</a>
+                <a href="https://fremtid.skaslien.no" class="flag-link" title="Norsk">🇳🇴</a>
+                <a href="https://zukunft.skaslien.no" class="flag-link" title="Deutsch">🇩🇪</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <span></span>
@@ -325,13 +335,21 @@
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
         
         // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-links a, .mobile-language-flags a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
         

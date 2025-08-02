@@ -75,6 +75,49 @@ nav {
     color: var(--accent-color);
 }
 
+/* Language Flags */
+.language-flags {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.flag-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.flag-link:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.flag-link.active {
+    opacity: 1;
+    background: rgba(143, 51, 28, 0.1);
+}
+
+/* Mobile Language Flags */
+.mobile-language-flags {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.mobile-language-flags .flag-link {
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -97,7 +140,7 @@ nav {
 }
 
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -105,7 +148,7 @@ nav {
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Hero Section */
@@ -583,6 +626,14 @@ footer a:hover {
         display: flex;
     }
     
+    .language-flags {
+        display: none;
+    }
+    
+    .mobile-language-flags {
+        display: flex;
+    }
+    
     .nav-links {
         position: fixed;
         top: 0;
@@ -591,11 +642,13 @@ footer a:hover {
         height: 100vh;
         background: var(--white);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        gap: 3rem;
+        gap: 1.5rem;
         transition: right 0.3s ease;
         z-index: 1000;
+        padding: 5rem 2rem 1rem;
+        overflow-y: auto;
     }
     
     .nav-links.active {
@@ -603,7 +656,7 @@ footer a:hover {
     }
     
     .nav-links a {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 600;
     }
     
